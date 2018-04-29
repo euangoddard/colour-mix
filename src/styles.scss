@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.colour-selector {
+  overflow-y: auto;
+}
+
+.colour-mixer {
+  background-image: linear-gradient(
+    to right,
+    #f44336 0%,
+    #ff5722 35%,
+    #ff5722 65%,
+    #ff9800 100%
+  );
+}
+
+$colours: (
+  red: #f44336,
+  red-orange: #ff5722,
+  orange: #ff9800,
+  yellow-orange: #ffc107,
+  yellow: #ffeb3b,
+  yellow-green: #cddc39,
+  green: #4caf50,
+  blue-green: #009688,
+  blue: #2196f3,
+  blue-violet: #673ab7,
+  violet: #9c27b0,
+  red-violet: #e91e63
+);
+
+%colour {
+  height: 17vw;
+}
+
+@each $name, $colour in $colours {
+  .colour-#{$name} {
+    @extend %colour;
+    background: $colour;
+  }
+}
