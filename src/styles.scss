@@ -1,4 +1,4 @@
-@import 'material-color';
+@import "material-color";
 
 html {
   box-sizing: border-box;
@@ -54,7 +54,7 @@ $colours: (
   red-violet: material-color(pink, 500)
 );
 
-%colour {
+.colour {
   height: 17vw;
   margin-bottom: $grid-spacing;
   cursor: pointer;
@@ -62,11 +62,40 @@ $colours: (
   &:last-child {
     margin-bottom: 0;
   }
+
+  &.active {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: rgba(pink, 0.5);
+      box-shadow: 0 0 15px rgba(black, 0.8);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      right: 100%;
+      top: calc(50% - 4px);
+      border-style: solid;
+      border-width: 8px 13.9px 8px 0;
+      border-color: transparent material-color(blue-grey, 900) transparent
+        transparent;
+      z-index: 2;
+    }
+  }
 }
 
 @each $name, $colour in $colours {
-  .colour-#{$name} {
-    @extend %colour;
+  .colour--#{$name} {
     background: $colour;
   }
 }

@@ -6,8 +6,7 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html -d dist",
-    "deploy":
-      "rm -rf dist && npm run build && workbox injectManifest workbox-config.js && echo mix.euans.space > dist/CNAME && gh-pages -d dist"
+    "deploy": "rm -rf dist && npm run build && workbox injectManifest workbox-config.js && echo mix.euans.space > dist/CNAME && gh-pages -d dist"
   },
   "keywords": [],
   "author": "Euan Goddard",
