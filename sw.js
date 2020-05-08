@@ -28,22 +28,22 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "91cc63665a1ed36fc7d0c1c7a4212252"
+    "revision": "b5773f353fa338be1cabf006beafab56"
   },
   {
-    "url": "main.0e8948de.js",
-    "revision": "d6e36492c0d3b6a11cc3c4e20451db92"
+    "url": "main.632f98fb.js",
+    "revision": "1a6b7038e866a61bcae1e2b92db81f94"
   },
   {
     "url": "manifest.webmanifest",
     "revision": "05a7a9237cc734c9e4c28742140527da"
   },
   {
-    "url": "styles.2f27e10d.css",
-    "revision": "5a104fc5f5d07bfdcfb2e728d395936d"
+    "url": "styles.0bff318e.css",
+    "revision": "679c1b6b55886ad7e311098cf7cc741f"
   },
   {
-    "url": "sw-register.9a1d39be.js",
-    "revision": "c3f71b4a60c75a79e95736f01f583ae0"
+    "url": "sw-register.6b2583bd.js",
+    "revision": "6a7633df180ae9fbcd58eb9edb32a36d"
   }
 ]);
