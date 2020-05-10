@@ -1,4 +1,4 @@
-@import 'material-color';
+@import "material-color";
 
 html {
   box-sizing: border-box;
@@ -51,7 +51,10 @@ $colours: (
   blue: material-color(blue, 500),
   blue-violet: material-color(deep-purple, 500),
   violet: material-color(purple, 500),
-  red-violet: material-color(pink, 500)
+  red-violet: material-color(pink, 500),
+  white: #fff,
+  grey: #888,
+  black: #000,
 );
 
 .colour {
@@ -65,13 +68,13 @@ $colours: (
   }
 
   &.active {
-    background-image: url('./dropper.svg');
+    background-image: url("./dropper.svg");
     background-size: 60%;
   }
 }
 
 @each $name, $colour in $colours {
-  .colour--#{$name} {
+  .#{"colour--" + $name} {
     background-color: $colour;
   }
 }

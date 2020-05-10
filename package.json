@@ -5,17 +5,35 @@
   "main": "src/index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html -d dist",
-    "deploy": "rm -rf dist && npm run build && workbox injectManifest workbox-config.js && echo mix.euans.space > dist/CNAME && gh-pages -d dist"
+    "build": "parcel build --experimental-scope-hoisting ./src/index.html -d dist",
+    "deploy": "rm -rf dist && NODE_ENV=prod npm run build && workbox injectManifest src/workbox-config.js && echo mix.euans.space > dist/CNAME && gh-pages -d dist"
   },
   "keywords": [],
   "author": "Euan Goddard",
   "license": "MIT",
   "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "node-sass": "^4.9.0",
-    "parcel-bundler": "^1.7.1",
-    "typescript": "^2.8.3",
+    "gh-pages": "^2.2.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.5",
+    "typescript": "^3.8.3",
     "workbox-cli": "^3.1.0"
-  }
+  },
+  "dependencies": {
+    "rxjs": "^6.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euangoddard/colour-mix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/euangoddard/colour-mix/issues"
+  },
+  "homepage": "https://github.com/euangoddard/colour-mix#readme",
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 ios_saf versions"
+  ]
 }

@@ -1,2 +1,3 @@
-# colour-mix
-Colour mixing
+# Colour Mix
+
+Colour mixing for kids
